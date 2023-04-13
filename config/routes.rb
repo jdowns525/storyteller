@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get("/", { :controller => "drinks", :action => "show_form" })
+  get("/", { :controller => "stories", :action => "show_form" })
   
-  get("/cocktail", { :controller => "drinks", :action => "results" })
+  get("/stories", { :controller => "stories", :action => "results" })
 
 
 

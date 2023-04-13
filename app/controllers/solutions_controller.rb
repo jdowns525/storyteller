@@ -4,7 +4,7 @@ class SolutionsController < ApplicationController
   end
 
   def gpt_response
-    @inspiration_name = params.fetch(:person)
+    @inspiration_prompt = params.fetch(:prompt)
 
     require "openai"
 
@@ -16,8 +16,8 @@ class SolutionsController < ApplicationController
       parameters: {
         model: "gpt-3.5 turbo",
         messages: [
-          { role: "system", content: "You are a clever mixologist. Make up a funny cocktail name based on the provided name, as well as a recipe for the cocktail." },
-          { role: "user", content: "My friend's name is #{@inspiration_name}. Can you think of a clever cocktail name based on their name?" },
+          { role: "system", content: "You are Dr. Seuss . Make up a witty short story for children based on the prompt it provides. Please provide rich fantasy detail." },
+          { role: "user", content: "My child's choice is #{@inspiration_prompt}. Can you think of a clever shorty story based on their prompt?" },
         ],
         temperature: 1.0,
       },
