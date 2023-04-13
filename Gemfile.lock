@@ -158,6 +158,9 @@ GEM
     http-cookie (1.0.4)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     indefinite_article (0.2.5)
@@ -195,6 +198,7 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.15.0)
     msgpack (1.5.1)
+    multi_xml (0.6.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
@@ -289,6 +293,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    ruby-openai (3.7.0)
+      httparty (>= 0.18.1)
     ruby2_keywords (0.0.5)
     rufo (0.13.0)
     sassc (2.4.0)
@@ -380,6 +386,7 @@ DEPENDENCIES
   rails_db (= 2.3.1)
   rspec-html-matchers
   rspec-rails
+  ruby-openai
   rufo
   sassc-rails
   spring
